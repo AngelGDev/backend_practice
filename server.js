@@ -46,6 +46,10 @@ let basicOpenings = {
     }
 }
 
+app.get('/', (request, response) => {
+    response.sendFile(__dirname + '/index.html')
+})
+
 app.get('/api/basic_openings/:race', (request, response) => {
     const inputRace = request.params.race.toLowerCase()
     if(basicOpenings[inputRace]){
