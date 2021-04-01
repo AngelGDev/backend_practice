@@ -55,6 +55,6 @@ app.get('/api/basic_openings/:race', (request, response) => {
     }
 })
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
